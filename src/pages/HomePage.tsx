@@ -17,9 +17,9 @@ export function HomePage() {
           <Link className="btn btn--primary" to="/work">
             View work
           </Link>
-          <a className="btn btn--ghost" href="#contact">
+          <Link className="btn btn--ghost" to="/about">
             Say hello
-          </a>
+          </Link>
         </div>
       </section>
     </div>

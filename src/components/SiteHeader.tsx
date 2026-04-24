@@ -20,7 +20,6 @@ export function SiteHeader() {
         <NavLink className={navLinkClass} to="/about">
           About
         </NavLink>
-        <span className="site-nav__item site-nav__item--soon">Contact</span>
       </nav>
     </header>
   )
