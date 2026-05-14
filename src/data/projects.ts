@@ -24,7 +24,7 @@ export const PROJECTS: Project[] = [
     year: '2026',
     detailSlug: 'snippet-manager',
     thumbnailSrc: '/images/projects/snippet-manager.jpg',
-    linkBadge: 'Case study',
+    linkBadge: 'full-stack app',
   },
   {
     id: 'memorizer',
@@ -35,6 +35,6 @@ export const PROJECTS: Project[] = [
     year: '2026',
     detailSlug: 'memorizer',
     thumbnailSrc: '/images/projects/memorizer.jpg',
-    linkBadge: 'Case study',
+    linkBadge: 'game',
   },
 ]
