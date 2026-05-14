@@ -20,7 +20,7 @@ export const PROJECTS: Project[] = [
     title: 'Snippet Manager',
     summary:
       'Full-stack app for creating, tagging, and sharing code snippets — ASP.NET Core 10 and EF Core API with JWT and role-based auth, React 19 and TypeScript SPA, plus Playwright e2e and xUnit integration tests.',
-    tags: ['React', 'TypeScript', 'ASP.NET Core', 'EF Core', 'Playwright'],
+    tags: ['React', 'TypeScript', 'ASP.NET Core', 'EF Core', 'Playwright', 'xUnit'],
     year: '2026',
     detailSlug: 'snippet-manager',
     thumbnailSrc: '/images/projects/snippet-manager.jpg',
