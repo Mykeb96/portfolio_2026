@@ -1,5 +1,6 @@
 import blackjackSpReadmeRaw from '../content/blackjack-sp/README.md?raw'
 import memorizerReadmeRaw from '../content/memorizer/README.md?raw'
+import perceptronLabReadmeRaw from '../content/perceptron-lab/README.md?raw'
 import readmeRaw from '../content/snippet-manager/README.md?raw'
 import typeRacerReadmeRaw from '../content/type-racer/README.md?raw'
 
@@ -9,6 +10,10 @@ const blackjackSpReadme = blackjackSpReadmeRaw.replace(
   '',
 )
 const memorizerReadme = memorizerReadmeRaw.replace(/^#\s+Memorizer\s*\n+/, '')
+const perceptronLabReadme = perceptronLabReadmeRaw.replace(
+  /^#\s+Perceptron\s+lab\s*\n+/i,
+  '',
+)
 const snippetReadme = readmeRaw.replace(/^#\s+Snippet Manager\s*\n+/, '')
 const typeRacerReadme = typeRacerReadmeRaw.replace(/^#\s+Type\s+Racer\s*\n+/, '')
 
@@ -106,6 +111,25 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
     repoUrl: 'https://github.com/Mykeb96/type_racer',
     heroImageSrc: '/images/projects/type-racer.jpg',
     readmeMarkdown: typeRacerReadme,
+  },
+  'perceptron-lab': {
+    slug: 'perceptron-lab',
+    employerLede:
+      'This build lines up with roles that blend front-end craft with ML literacy: implementing a classic learning rule in plain TypeScript, wiring it to interactive controls, and surfacing model behavior through a chart library instead of treating the model as a black box.',
+    employerKeywords: [
+      'React & TypeScript',
+      'Vite',
+      'Binary linear perceptron (from scratch)',
+      'Feature scaling & training loop',
+      'Plotly.js / react-plotly.js',
+      'Interactive visualization & metrics',
+      'ESLint',
+      'Static site deployment (Vercel)',
+    ],
+    liveUrl: 'https://perceptron-lab.vercel.app/',
+    repoUrl: 'https://github.com/Mykeb96/perceptron-training',
+    heroImageSrc: '/images/projects/perceptron-lab.jpg',
+    readmeMarkdown: perceptronLabReadme,
   },
 }
 

@@ -59,4 +59,15 @@ export const PROJECTS: Project[] = [
     thumbnailSrc: '/images/projects/type-racer.jpg',
     linkBadge: 'game',
   },
+  {
+    id: 'perceptron-lab',
+    title: 'Perceptron lab',
+    summary:
+      'Interactive 2D visualization of a binary linear perceptron — React 18 and TypeScript with Vite, Plotly for the scatter plot and decision boundary, sliders for dataset size and training epochs, and metrics for accuracy and misclassifications.',
+    tags: ['React', 'TypeScript', 'Vite', 'Plotly'],
+    year: '2026',
+    detailSlug: 'perceptron-lab',
+    thumbnailSrc: '/images/projects/perceptron-lab.jpg',
+    linkBadge: 'interactive demo',
+  },
 ]
