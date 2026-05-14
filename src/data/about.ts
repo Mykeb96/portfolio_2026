@@ -3,7 +3,7 @@ export const ABOUT_LINKS = {
   github: 'https://github.com/Mykeb96',
   linkedin: 'https://www.linkedin.com/in/mykael-barnes/',
   /** Served from `/public` */
-  resumePdf: '/Mykael_Barnes_resume_2026.pdf',
+  resumePdf: '/Mykael_Barnes_Resume.pdf',
 } as const
 
 export const CONTACT = {

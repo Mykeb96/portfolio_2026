@@ -38,7 +38,7 @@ export function AboutPage() {
           <a
             className="btn btn--ghost"
             href={ABOUT_LINKS.resumePdf}
-            download="Mykael_Barnes_resume_2026.pdf"
+            download="Mykael_Barnes_Resume.pdf"
           >
             Download resume
           </a>
