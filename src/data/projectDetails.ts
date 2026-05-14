@@ -1,6 +1,8 @@
+import memorizerReadmeRaw from '../content/memorizer/README.md?raw'
 import readmeRaw from '../content/snippet-manager/README.md?raw'
 
 /** Drop repo title line so the page heading is not duplicated in the README body. */
+const memorizerReadme = memorizerReadmeRaw.replace(/^#\s+Memorizer\s*\n+/, '')
 const snippetReadme = readmeRaw.replace(/^#\s+Snippet Manager\s*\n+/, '')
 
 export type ProjectDetail = {
@@ -39,6 +41,26 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
     repoUrl: 'https://github.com/Mykeb96/snippet-manager',
     heroImageSrc: '/images/projects/snippet-manager.jpg',
     readmeMarkdown: snippetReadme,
+  },
+  memorizer: {
+    slug: 'memorizer',
+    employerLede:
+      'This build lines up with what many front-end and product-engineering roles ask for: a focused SPA, strict TypeScript modeling of UI state, performance-minded components, and polish that holds up on real devices.',
+    employerKeywords: [
+      'React & TypeScript',
+      'Vite',
+      'SCSS modules',
+      'Component-driven UI',
+      'Game / interaction state',
+      'React.memo & stable keys',
+      'Touch-friendly controls',
+      'Static site deployment (Vercel)',
+      'ESLint',
+    ],
+    liveUrl: 'https://memorizer-game.vercel.app/',
+    repoUrl: 'https://github.com/Mykeb96/Memorizer',
+    heroImageSrc: '/images/projects/memorizer.jpg',
+    readmeMarkdown: memorizerReadme,
   },
 }
 

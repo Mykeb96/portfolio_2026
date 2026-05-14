@@ -26,4 +26,15 @@ export const PROJECTS: Project[] = [
     thumbnailSrc: '/images/projects/snippet-manager.jpg',
     linkBadge: 'Case study',
   },
+  {
+    id: 'memorizer',
+    title: 'Memorizer',
+    summary:
+      'Memory card game — React and TypeScript with Vite, SCSS modules, glass-style cards and pair sigils, match timing and win flow, touch-friendly layout, and a static build deployed on Vercel.',
+    tags: ['React', 'TypeScript', 'Vite', 'SCSS'],
+    year: '2026',
+    detailSlug: 'memorizer',
+    thumbnailSrc: '/images/projects/memorizer.jpg',
+    linkBadge: 'Case study',
+  },
 ]
