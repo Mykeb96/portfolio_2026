@@ -17,7 +17,7 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
   'snippet-manager': {
     slug: 'snippet-manager',
     employerLede:
-      'This build lines up with what many full-stack and product-engineering roles ask for: a secure API, a modern SPA, relational data modeling, and tests that behave the way a shipping team would expect — not a demo that stops at CRUD.',
+      'This build lines up with what many full-stack and product-engineering roles ask for: a secure API, a modern SPA, relational data modeling, and tests that behave the way a shipping team would expect.',
     employerKeywords: [
       'Full-stack development',
       'REST API design',

@@ -88,7 +88,7 @@ export function ProjectDetailPage() {
         aria-labelledby="employer-heading"
       >
         <h2 id="employer-heading" className="project-detail__section-title">
-          Hiring-relevant highlights
+          Relevant highlights
         </h2>
         <p className="project-detail__employer-lede">{detail.employerLede}</p>
         <ul className="project-detail__keywords">
