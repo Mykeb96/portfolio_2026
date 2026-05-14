@@ -8,8 +8,8 @@ export function WorkPage() {
         <p className="eyebrow">Selected work</p>
         <h1 className="work__title">Projects</h1>
         <p className="work__lede">
-          Placeholder cards for now — swap in thumbnails, links, and case-study
-          routes when each piece is ready to show.
+          Recent builds and experiments — links go to demos, repos, or write-ups
+          when they are public.
         </p>
       </header>
 

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import type { Project } from '../data/projects'
 
 function initials(title: string) {
@@ -12,13 +13,28 @@ type Props = {
 }
 
 export function ProjectCard({ project }: Props) {
-  const { title, summary, tags, year, href } = project
-  const interactive = Boolean(href)
+  const { title, summary, tags, year, href, linkBadge, detailSlug, thumbnailSrc } =
+    project
+  const detailPath = detailSlug ? `/work/${detailSlug}` : undefined
+  const interactive = Boolean(detailPath || href)
 
   const inner = (
     <>
-      <div className="project-card__media" aria-hidden="true">
-        <span className="project-card__glyph">{initials(title)}</span>
+      <div
+        className={`project-card__media${thumbnailSrc ? ' project-card__media--image' : ''}`}
+        aria-hidden={thumbnailSrc ? undefined : true}
+      >
+        {thumbnailSrc ? (
+          <img
+            className="project-card__thumb"
+            src={thumbnailSrc}
+            alt=""
+            loading="lazy"
+            decoding="async"
+          />
+        ) : (
+          <span className="project-card__glyph">{initials(title)}</span>
+        )}
       </div>
       <div className="project-card__body">
         <p className="project-card__meta">
@@ -28,7 +44,7 @@ export function ProjectCard({ project }: Props) {
           )}
           {interactive && (
             <span className="project-card__badge project-card__badge--live">
-              Live
+              {linkBadge ?? (detailPath ? 'Case study' : 'Live')}
             </span>
           )}
         </p>
@@ -52,6 +68,14 @@ export function ProjectCard({ project }: Props) {
       )}
     </>
   )
+
+  if (detailPath) {
+    return (
+      <Link className="project-card project-card--link" to={detailPath}>
+        {inner}
+      </Link>
+    )
+  }
 
   if (href) {
     return (

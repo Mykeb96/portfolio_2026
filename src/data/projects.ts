@@ -4,44 +4,26 @@ export type Project = {
   summary: string
   tags: string[]
   year: string
-  /** Set when you have a live URL or case-study route */
+  /** In-app detail page at `/work/:id` */
+  detailSlug?: string
+  /** Hero / card image under `public/` */
+  thumbnailSrc?: string
+  /** External card link when there is no `detailSlug` */
   href?: string
+  /** Label next to the year when the card is interactive */
+  linkBadge?: string
 }
 
-/**
- * Placeholder entries — replace summaries, tags, and links as you ship work.
- */
 export const PROJECTS: Project[] = [
   {
-    id: 'sample-analytics',
-    title: 'Analytics dashboard',
+    id: 'snippet-manager',
+    title: 'Snippet Manager',
     summary:
-      'Role, stack, and outcome will live here. One or two lines that sell the problem you solved.',
-    tags: ['React', 'TypeScript', 'Data viz'],
-    year: '2025',
-  },
-  {
-    id: 'sample-commerce',
-    title: 'E‑commerce experience',
-    summary:
-      'Skeleton card: note performance, accessibility, or conversion wins when you have them.',
-    tags: ['Next.js', 'Design system'],
-    year: '2024',
-  },
-  {
-    id: 'sample-brand',
-    title: 'Marketing site refresh',
-    summary:
-      'Placeholder for a content-led build — CMS, animation, or brand collaboration highlights.',
-    tags: ['Vite', 'Three.js', 'Content'],
-    year: '2024',
-  },
-  {
-    id: 'sample-internal',
-    title: 'Internal tooling',
-    summary:
-      'Use this slot for something less public: workflows, dashboards, or platform glue.',
-    tags: ['Node', 'UX'],
-    year: '2023',
+      'Full-stack app for creating, tagging, and sharing code snippets — ASP.NET Core 10 and EF Core API with JWT and role-based auth, React 19 and TypeScript SPA, plus Playwright e2e and xUnit integration tests.',
+    tags: ['React', 'TypeScript', 'ASP.NET Core', 'EF Core', 'Playwright'],
+    year: '2026',
+    detailSlug: 'snippet-manager',
+    thumbnailSrc: '/images/projects/snippet-manager.jpg',
+    linkBadge: 'Case study',
   },
 ]

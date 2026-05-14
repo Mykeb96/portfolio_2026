@@ -191,6 +191,19 @@ a.project-card--link:focus-visible {
   color: color-mix(in srgb, var(--fg) 35%, transparent);
 }
 
+.project-card__media--image {
+  padding: 0;
+  background: var(--surface);
+}
+
+.project-card__thumb {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
 .project-card__body {
   display: flex;
   flex-direction: column;
@@ -656,5 +669,289 @@ a.project-card--link:hover .project-card__cta-arrow {
   .site-nav {
     width: 100%;
     justify-content: flex-start;
+  }
+}
+
+/* --- Project case study (detail) --- */
+
+.project-detail {
+  flex: 1;
+  width: 100%;
+  max-width: 52rem;
+  margin-inline: auto;
+  padding-top: clamp(1rem, 3vw, 1.75rem);
+}
+
+.project-detail__nav {
+  margin-bottom: 1.25rem;
+}
+
+.project-detail__back {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--accent-soft);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.project-detail__back:hover {
+  color: var(--accent);
+}
+
+.project-detail__hero {
+  display: grid;
+  gap: clamp(1.25rem, 3vw, 1.75rem);
+  margin-bottom: clamp(2.25rem, 4vw, 3rem);
+}
+
+.project-detail__hero-visual {
+  border-radius: 1rem;
+  border: 1px solid var(--border-strong);
+  overflow: hidden;
+  background: color-mix(in srgb, var(--surface) 88%, var(--bg-deep));
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.35);
+}
+
+.project-detail__hero-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.project-detail__hero-panel {
+  padding: clamp(1.1rem, 2.5vw, 1.35rem) clamp(1.15rem, 2.5vw, 1.5rem);
+  border-radius: 1rem;
+  border: 1px solid var(--border-strong);
+  background: color-mix(in srgb, var(--surface) 72%, transparent);
+}
+
+.project-detail__title {
+  margin: 0.35rem 0 0.5rem;
+  font-size: clamp(1.65rem, 2.5vw + 1rem, 2.15rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: var(--fg);
+}
+
+.project-detail__meta {
+  margin: 0 0 1rem;
+  font-size: 0.88rem;
+  color: var(--fg-muted);
+}
+
+.project-detail__meta-sep {
+  margin: 0 0.4rem;
+  color: var(--fg-faint);
+}
+
+.project-detail__summary {
+  margin: 0 0 1.25rem;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: var(--fg-muted);
+}
+
+.project-detail__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.project-detail__section-title {
+  margin: 0 0 0.85rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--fg);
+}
+
+.project-detail__employer {
+  margin-bottom: clamp(2.25rem, 4vw, 3rem);
+  padding: clamp(1.15rem, 2.5vw, 1.45rem) clamp(1.15rem, 2.5vw, 1.5rem);
+  border-radius: 1rem;
+  border: 1px solid var(--border-strong);
+  background: color-mix(in srgb, var(--surface) 55%, transparent);
+}
+
+.project-detail__employer-lede {
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--fg-muted);
+}
+
+.project-detail__keywords {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.project-detail__keywords li {
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 0.28rem 0.58rem;
+  border-radius: 999px;
+  color: var(--fg-dim);
+  border: 1px solid var(--border-subtle);
+  background: color-mix(in srgb, var(--bg-deep) 35%, transparent);
+}
+
+.project-detail__readme {
+  margin-bottom: clamp(2rem, 5vw, 3.5rem);
+}
+
+.markdown-body {
+  padding: clamp(1.1rem, 2.5vw, 1.35rem) clamp(1.1rem, 2.5vw, 1.35rem);
+  border-radius: 1rem;
+  border: 1px solid var(--border-strong);
+  background: color-mix(in srgb, var(--surface) 78%, transparent);
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--fg-muted);
+  overflow-x: auto;
+}
+
+.markdown-body > :first-child {
+  margin-top: 0;
+}
+
+.markdown-body > :last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4 {
+  margin: 1.65rem 0 0.65rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--fg);
+}
+
+.markdown-body h2 {
+  font-size: 1.18rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.markdown-body h3 {
+  font-size: 1.02rem;
+}
+
+.markdown-body h4 {
+  font-size: 0.95rem;
+}
+
+.markdown-body p {
+  margin: 0.75rem 0;
+}
+
+.markdown-body a {
+  color: var(--accent-soft);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.markdown-body a:hover {
+  color: var(--accent);
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  margin: 0.75rem 0;
+  padding-left: 1.35rem;
+}
+
+.markdown-body li {
+  margin: 0.35rem 0;
+}
+
+.markdown-body blockquote {
+  margin: 1rem 0;
+  padding: 0.65rem 1rem;
+  border-left: 3px solid color-mix(in srgb, var(--accent) 55%, transparent);
+  background: color-mix(in srgb, var(--bg-deep) 40%, transparent);
+  border-radius: 0 0.5rem 0.5rem 0;
+  color: var(--fg-dim);
+}
+
+.markdown-body hr {
+  margin: 1.75rem 0;
+  border: none;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.markdown-body code {
+  font-family: ui-monospace, 'Cascadia Code', 'Segoe UI Mono', monospace;
+  font-size: 0.84em;
+  padding: 0.12rem 0.38rem;
+  border-radius: 0.35rem;
+  border: 1px solid var(--border-subtle);
+  background: color-mix(in srgb, var(--bg-deep) 55%, transparent);
+  color: var(--accent-2);
+}
+
+.markdown-body pre {
+  margin: 1rem 0;
+  padding: 1rem 1.1rem;
+  border-radius: 0.65rem;
+  border: 1px solid var(--border-subtle);
+  background: color-mix(in srgb, var(--bg-deep) 65%, transparent);
+  overflow-x: auto;
+  line-height: 1.5;
+}
+
+.markdown-body pre code {
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--fg-dim);
+  font-size: 0.8rem;
+}
+
+.markdown-body table {
+  width: 100%;
+  min-width: 36rem;
+  margin: 1rem 0;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+
+.markdown-body tr {
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.markdown-body th,
+.markdown-body td {
+  padding: 0.55rem 0.65rem;
+  text-align: left;
+  vertical-align: top;
+  border: 1px solid var(--border-subtle);
+}
+
+.markdown-body th {
+  font-weight: 600;
+  color: var(--fg);
+  background: color-mix(in srgb, var(--bg-deep) 45%, transparent);
+}
+
+@media (min-width: 720px) {
+  .project-detail__hero {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    align-items: stretch;
+  }
+
+  .project-detail__hero-visual {
+    min-height: 100%;
+  }
+
+  .project-detail__hero-img {
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
   }
 }
