@@ -1,7 +1,12 @@
+import blackjackSpReadmeRaw from '../content/blackjack-sp/README.md?raw'
 import memorizerReadmeRaw from '../content/memorizer/README.md?raw'
 import readmeRaw from '../content/snippet-manager/README.md?raw'
 
 /** Drop repo title line so the page heading is not duplicated in the README body. */
+const blackjackSpReadme = blackjackSpReadmeRaw.replace(
+  /^#\s+Blackjack \(single player\)\s*\n+/,
+  '',
+)
 const memorizerReadme = memorizerReadmeRaw.replace(/^#\s+Memorizer\s*\n+/, '')
 const snippetReadme = readmeRaw.replace(/^#\s+Snippet Manager\s*\n+/, '')
 
@@ -61,6 +66,25 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
     repoUrl: 'https://github.com/Mykeb96/Memorizer',
     heroImageSrc: '/images/projects/memorizer.jpg',
     readmeMarkdown: memorizerReadme,
+  },
+  'blackjack-sp': {
+    slug: 'blackjack-sp',
+    employerLede:
+      'This build lines up with roles that care about clear domain modeling in the UI layer: game rules expressed in typed TypeScript modules, predictable round flow, and a polished responsive interface — including motion preferences — without leaning on a heavy framework beyond React.',
+    employerKeywords: [
+      'React & TypeScript',
+      'Vite',
+      'Domain models (deck, player, dealer, game)',
+      'Game rules & outcomes in code',
+      'Responsive / safe-area layout',
+      'Animation timing & reduced motion',
+      'ESLint (flat config)',
+      'Static site deployment (Vercel)',
+    ],
+    liveUrl: 'https://black-jack-sp.vercel.app/',
+    repoUrl: 'https://github.com/Mykeb96/BlackJack-SP',
+    heroImageSrc: '/images/projects/blackjack-sp.jpg',
+    readmeMarkdown: blackjackSpReadme,
   },
 }
 

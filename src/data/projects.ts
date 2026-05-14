@@ -37,4 +37,15 @@ export const PROJECTS: Project[] = [
     thumbnailSrc: '/images/projects/memorizer.jpg',
     linkBadge: 'game',
   },
+  {
+    id: 'blackjack-sp',
+    title: 'Blackjack',
+    summary:
+      'Single-player Blackjack — React 19 and TypeScript with Vite, model layer for deck, hands, dealer, and round flow, casino-style betting UI, staggered deal animation, and responsive layout with reduced-motion support.',
+    tags: ['React', 'TypeScript', 'Vite', 'CSS'],
+    year: '2026',
+    detailSlug: 'blackjack-sp',
+    thumbnailSrc: '/images/projects/blackjack-sp.jpg',
+    linkBadge: 'game',
+  },
 ]
