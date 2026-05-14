@@ -31,6 +31,8 @@ export function ProjectDetailPage() {
     return <Navigate to="/work" replace />
   }
 
+  const detailEyebrow = project.linkBadge ?? 'Project'
+
   return (
     <div className="project-detail">
       <nav className="project-detail__nav" aria-label="Breadcrumb">
@@ -52,7 +54,7 @@ export function ProjectDetailPage() {
           />
         </div>
         <div className="project-detail__hero-panel">
-          <p className="eyebrow">Case study</p>
+          <p className="eyebrow">{detailEyebrow}</p>
           <h1 className="project-detail__title">{project.title}</h1>
           <p className="project-detail__meta">
             <span>{project.year}</span>

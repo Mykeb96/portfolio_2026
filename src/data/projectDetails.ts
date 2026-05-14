@@ -1,6 +1,7 @@
 import blackjackSpReadmeRaw from '../content/blackjack-sp/README.md?raw'
 import memorizerReadmeRaw from '../content/memorizer/README.md?raw'
 import readmeRaw from '../content/snippet-manager/README.md?raw'
+import typeRacerReadmeRaw from '../content/type-racer/README.md?raw'
 
 /** Drop repo title line so the page heading is not duplicated in the README body. */
 const blackjackSpReadme = blackjackSpReadmeRaw.replace(
@@ -9,6 +10,7 @@ const blackjackSpReadme = blackjackSpReadmeRaw.replace(
 )
 const memorizerReadme = memorizerReadmeRaw.replace(/^#\s+Memorizer\s*\n+/, '')
 const snippetReadme = readmeRaw.replace(/^#\s+Snippet Manager\s*\n+/, '')
+const typeRacerReadme = typeRacerReadmeRaw.replace(/^#\s+Type\s+Racer\s*\n+/, '')
 
 export type ProjectDetail = {
   slug: string
@@ -85,6 +87,25 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
     repoUrl: 'https://github.com/Mykeb96/BlackJack-SP',
     heroImageSrc: '/images/projects/blackjack-sp.jpg',
     readmeMarkdown: blackjackSpReadme,
+  },
+  'type-racer': {
+    slug: 'type-racer',
+    employerLede:
+      'This build lines up with front-end roles that value tight input handling and feedback loops: comparing keystrokes to expected text, driving UI from derived state, measuring elapsed time accurately, and presenting results (WPM) without muddying the core typing flow.',
+    employerKeywords: [
+      'React & TypeScript',
+      'Vite',
+      'Controlled input & keyboard UX',
+      'Per-character validation / highlighting',
+      'Timers & round lifecycle',
+      'Derived game state in components',
+      'ESLint (flat config)',
+      'Static site deployment (Vercel)',
+    ],
+    liveUrl: 'https://type-racer-game.vercel.app/',
+    repoUrl: 'https://github.com/Mykeb96/type_racer',
+    heroImageSrc: '/images/projects/type-racer.jpg',
+    readmeMarkdown: typeRacerReadme,
   },
 }
 

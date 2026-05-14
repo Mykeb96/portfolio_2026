@@ -48,4 +48,15 @@ export const PROJECTS: Project[] = [
     thumbnailSrc: '/images/projects/blackjack-sp.jpg',
     linkBadge: 'game',
   },
+  {
+    id: 'type-racer',
+    title: 'Type Racer',
+    summary:
+      'Typing speed game — React 19 and TypeScript with Vite, live per-character feedback, centisecond timer, WPM on completion, countdown and auto-finish when the passage matches, and multiple built-in prompts.',
+    tags: ['React', 'TypeScript', 'Vite', 'CSS'],
+    year: '2026',
+    detailSlug: 'type-racer',
+    thumbnailSrc: '/images/projects/type-racer.jpg',
+    linkBadge: 'game',
+  },
 ]
